@@ -4,13 +4,14 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
+    "start": "npm run build && node server.js",
     "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
   },
   "devDependencies": {
     "@fontsource/fira-mono": "^4.5.10",
     "@neoconfetti/svelte": "^1.0.0",
-    "@sveltejs/adapter-node": "^5.2.9",
+    "@sveltejs/adapter-node": "^5.2.12",
     "@sveltejs/kit": "^2.8.2",
     "@sveltejs/vite-plugin-svelte": "^4.0.1",
     "svelte": "^5.2.7",
@@ -18,5 +19,11 @@
     "typescript": "^5.7.2",
     "vite": "^5.4.11"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  }
 }

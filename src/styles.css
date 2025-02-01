@@ -1,0 +1,113 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Light & Dark Theme Support */
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #222;
+  --accent-color: #007bff;
+  --card-bg: #fff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+      --bg-color: #181818;
+      --text-color: #f9f9f9;
+      --accent-color: #4da3ff;
+      --card-bg: #222;
+      --card-shadow: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Apply Background and Text Colors */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Header */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Dictionary List */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+
+li {
+  background: var(--card-bg);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px var(--card-shadow);
+  transition: transform 0.2s ease-in-out;
+}
+
+li:hover {
+  transform: translateY(-3px);
+}
+
+/* Dictionary Links */
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Dictionary Entry Page */
+.dictionary-entry {
+  max-width: 600px;
+  margin: auto;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px var(--card-shadow);
+}
+
+.dictionary-entry h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.dictionary-entry p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.dictionary-entry i {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  a {
+      font-size: 1rem;
+  }
+
+  .dictionary-entry {
+      padding: 15px;
+  }
+}
